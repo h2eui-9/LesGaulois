@@ -18,7 +18,7 @@ public class Romain {
  }
 
     private String prendreParole() {
- 	return "Le romain " + nom + " : ";
+ 	return "Le Romain " + nom + " : ";
     }
     
     public void recevoirCoup(int forceCoup) {
@@ -26,9 +26,8 @@ public class Romain {
     	if (force > 0) {
     		parler("Aïe");
 		} else {
-           parler("J'abandonne...");
-		}
-			
+           parler("J'abandonne !");
+		}			
 
 	}
 }

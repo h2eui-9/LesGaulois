@@ -19,12 +19,19 @@ public class Gaulois {
 	}
 
 	private String prendreParole() {
-		return "Le gaulois " + nom + " : ";
+		return "Le Gaulois " + nom + " : ";
 	}
 
 	public void frapper(Romain romain) {
-		System.out.println(nom + " envoie un grand coup dans la mâchoire de" + romain.getNom());
-		romain.recevoirCoup(force / 3);
+		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
+		int forceCoup = (force * effetPotion) / 3;
+		romain.recevoirCoup(forceCoup);
+		effetPotion--;
+		if (effetPotion < 1) effetPotion = 1;
+	}
+	
+	public void booster(int forcePotion) {
+		effetPotion = forcePotion;
 	}
 
 	@Override
@@ -33,9 +40,8 @@ public class Gaulois {
 	}
 
 	public static void main(String[] args) {
+		Gaulois asterix = new Gaulois("Astérix", 8);
+		System.out.println(asterix);
 	}
 
-	{
-
-	}
 }
